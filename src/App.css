@@ -18,7 +18,10 @@
   width: 100%;
   height: 4rem;
   position: fixed;
-  border: solid 3px rgb(198, 122, 219);
+  background-color: rgb(94, 94, 94);
+  /* border: solid 3px rgb(198, 122, 219); */
+  top: 0;
+  z-index: 2;
 }
 /* hamburger section of navbar */
 
@@ -31,11 +34,11 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-color: rgba(105, 240, 255, 0.293);
+  /* background-color: rgba(105, 240, 255, 0.293); */
 }
 
 .hamburger-container.active {
-  background-color: rgba(255, 105, 180, 0.481);
+  /* background-color: rgba(255, 105, 180, 0.481); */
 }
 
 .hamburger-container::before {
@@ -43,7 +46,7 @@
   position: absolute;
   width: 25px;
   height: 2px;
-  background-color: lime;
+  background-color: black;
   transition: all 0.2;
   transform: translateY(-10px);
 }
@@ -53,14 +56,15 @@
   position: absolute;
   width: 25px;
   height: 2px;
-  background-color: lime;
+  background-color: black;
+
   transition: all 0.2;
   /* transform: translateY(10px); */
 }
 
 .hamburger-container::after {
   /* transform: translateY(0px); */
-  box-shadow: 0 10px 0 blue;
+  box-shadow: 0 10px 0 black;
 }
 
 .hamburger-container.active::before {
@@ -70,7 +74,7 @@
 
 .hamburger-container.active::after {
   transform: translateY(0px) rotate(-45deg);
-  box-shadow: 0 0px 0 blue;
+  box-shadow: 0 0px 0 black;
 }
 
 /* hamburger section of navbar */
@@ -81,8 +85,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-margin: 0 1rem;
-  border: solid 2px red;
+  margin: 0 1rem;
+  /* border: solid 2px red; */
   /* width: 50%; */
 }
 
@@ -93,7 +97,7 @@ margin: 0 1rem;
 
 .right-nav {
   align-items: end;
-  border: solid 2px yellow;
+  /* border: solid 2px yellow; */
   width: 30%;
 }
 
@@ -102,9 +106,8 @@ margin: 0 1rem;
 } */
 
 .cart-container {
-   position: relative;
-  /* margin-right: 1rem; */
- 
+  position: relative;
+  margin: 1rem;
 }
 
 .cart-count {
@@ -112,13 +115,12 @@ margin: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-   background-color: orange;
+  background-color: orange;
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
-  top: -.75rem;
-  right: -.25rem;
-
+  top: -0.75rem;
+  right: -0.25rem;
 }
 
 .profile-containter {
@@ -132,4 +134,31 @@ margin: 0 1rem;
 .profile-containter img {
   width: 100%;
   border-radius: 50%;
+}
+
+/* carousel */
+
+.carousel {
+  margin-top: 4rem;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border: solid 2px lime;
+}
+
+.carousel-indicators button {
+  width: 2rem;
+  height: 1rem;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 50vh;
+}
+
+.carousel-item img {
+  width: 100%;
 }

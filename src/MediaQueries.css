@@ -1,0 +1,157 @@
+/* ///////////////// */
+/* ! MEDIA QUERIES XS DEVICES TO TABLET */
+/* ///////////////// */
+
+@media (max-width: 350px) {
+  #nav h1 {
+    font-size: 1.5rem;
+  }
+
+  .price-container div:first-child {
+    width: 45%;
+  }
+}
+
+@media (max-width: 769px) {
+  #nav h1 {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+  }
+}
+
+/* ///////////////// */
+/* ! MEDIA QUERIES DESKTOP UP*/
+/* ///////////////// */
+
+@media (min-width: 850px) {
+  .main-container {
+    justify-content: start;
+  }
+
+  .content-container {
+    /* border: solid 2px red; */
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .details-container {
+    /* min-height: 100%; */
+  }
+
+  .details-container,
+  .carousel-container {
+    margin-top: var(--nav-height);
+    width: 45%;
+
+    /* border: solid 2px blue; */
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+  }
+
+  .left-nav {
+    justify-content: center;
+  }
+
+  .right-nav {
+    justify-content: end;
+    /* border: solid 2px lime; */
+  }
+
+  .hamburger-container {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4rem;
+    /* border: solid 2px white; */
+  }
+
+  .desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop-nav ul a {
+    text-decoration: none;
+    list-style: none;
+    margin: 0 0.5rem;
+    color: whitesmoke;
+  }
+  .desktop-nav ul a:hover {
+    color: orange;
+  }
+
+  .dropdown-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* border: solid 2px lime; */
+    width: 7.5rem;
+  }
+
+  .dropdown-nav .dropdown-icon {
+    margin-left: 4px;
+  }
+
+  /* cart and profile photo */
+
+  .cart-container {
+    margin-right: 1rem;
+    /* border: solid 3px skyblue; */
+  }
+
+  .profile-containter {
+    /* position: relative; */
+    /* top: -0.2rem; */
+    margin: 0 0.25rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    border-radius: 50%;
+    /* border: solid 3px salmon; */
+  }
+
+  .profile-containter img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .price-container {
+    font-size: 1.5rem;
+  }
+
+  #discount {
+    margin-left: 2rem;
+  }
+
+  .description-container *,
+  .btn-container button {
+    margin: 1rem 0;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  .description-container *,
+  .btn-container button {
+    margin: 2rem 0;
+  }
+
+  .description-container p {
+    font-size: 1.25rem;
+  }
+
+  .company-name {
+    font-size: 2.5rem;
+  }
+}

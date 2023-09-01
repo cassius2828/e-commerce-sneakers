@@ -1,69 +1,74 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
+// style sheets
+import "./App.css";
+import "./components/Nav/Nav.css";
+import "./components/Carousel/Carousel.css";
+import "./components/Descriptons/Descriptions.css";
+import "./components/MoreStyles/MoreStyles.css";
+import "./MediaQueries.css";
+import './components/SignIn/SignIn.css';
 
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-
-import './App.css'
-import HomeCarousel from "./Carousel";
-
-
+import Navbar from "./components/Nav/Nav";
+import HomeCarousel from "./components/Carousel/Carousel";
+import { DescriptionCart } from "./components/Descriptons/DescriptionCart";
+import { MoreStyles } from "./components/MoreStyles/MoreStyles";
 
 function App() {
+  const windowWidth = window.innerWidth;
+  useEffect(() => {
+    console.log(windowWidth + " hi");
+  }, windowWidth);
+
   return (
     <div className="main-container">
       <Navbar />
-      <HomeCarousel />
+      <section id="main-section">
+        <div className=" content-container flex">
+          <HomeCarousel />
+          <DescriptionCart />
+        </div>
+      </section>
+      <MoreStyles />
+      <footer>
+        <p>
+          Developed By{" "}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/cassius2828"
+          >
+            Cassius Reynolds
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
 
 export default App;
-
-export const Navbar = () => {
-  const [toggleDrop, setToggleDrop] = useState(false);
-
-  const toggleNav = () => {
-    const burger = document.getElementById("burger");
-    burger.classList.toggle("active");
-    setToggleDrop(!toggleDrop);
-  };
-
-  return (
-    <div className="navbar">
-      {/* left side */}
-      <div className="left-nav">
-        <div
-          onClick={toggleNav}
-          id="burger"
-          className="hamburger-container"
-        ></div>
-        <h1>Sneakers</h1>
-      </div>
-      {/* right side */}
-      <div className="right-nav">
-        <div className="cart-container">
-          <div className="cart-count">
-            3
-          </div>
-          <FontAwesomeIcon
-            size="lg"
-            id="cart-icon"
-            icon={faCartShopping}
-            className="icon"
-          />
-          {/* on clicks I need to toggle this cart count class or something alike */}
-         
-        </div>
-
-        <div className="profile-containter">
-          <img
-            src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI="
-            alt="profile"
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
+/*
+Things to add
+1. a way to track each item's price and add it in the cart
+2. Keeping track of the cart count
+3. ability to apply discounts
+4. drop down menu to show categories
+5. deals section with exclusive discount codes
+6. Add modal for checkout
+7. make discount entry on checkout modal
+8. create login and logout, with correspingn photos
+9. do category dropdown
+10. Make separate page for exclusive discount codes
+11. Make alert for collections
 
 
+
+DISCOUNT CODES
+1. FREE99 (BOGO)
+2. CHEFCURRY (30% off)
+3. UNCLEDREW (11% off)
+4. STAYMELO ($62 off)
+5. MAMBA (24% off)
+
+
+
+*/

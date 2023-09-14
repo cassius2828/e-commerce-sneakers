@@ -26,7 +26,7 @@ const toggleID = 'SHOW_MODAL';
 
     // burger icon
     burger.classList.toggle("active");
-    setToggleDrop(!toggleDrop);
+    setToggleDrop( current => !current);
     // nav screen
     if (toggleDrop) {
       nav.classList.add("hide");
@@ -193,11 +193,12 @@ const toggleID = 'SHOW_MODAL';
         </div>
       </div>
       {/* need to figure out how to properly toggle modal in redux */}
-     {/* <Toggle>
-        <SignIn
+     {/* <Toggle> */}
+     {/* {!userChange ? <SignIn/> : null} */}
+        {/* <SignIn
         onClick={() => dispatch(hideToggle(toggleID))}
-        />
-     </Toggle> */}
+        /> */}
+     {/* </Toggle> */}
 
     </div>
   );

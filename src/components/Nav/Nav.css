@@ -53,11 +53,12 @@
   height: 2px;
   background-color: black;
   transition: all 0.2;
+   box-shadow: 0 10px 0 black;
 }
 
-.hamburger-container::after {
-  box-shadow: 0 10px 0 black;
-}
+/* .hamburger-container::after {
+ 
+} */
 
 .hamburger-container.active::before {
   transform: translateY(0px) rotate(45deg);
@@ -215,6 +216,10 @@
   left: -5px;
 }
 
+#category-dropdown-nav a:hover {
+    color: whitesmoke
+}
+
 #dropdown-list {
   margin: 1.7rem auto 0 auto;
   text-align: center;
@@ -232,6 +237,7 @@
 #dropdown-list li:hover {
   background-color: orange;
 }
+
 
 /* hiding and showing nav menu */
 
